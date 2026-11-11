@@ -23,5 +23,6 @@ Les notes sont écrites avec nos propres mots : une synthèse n'est pas une copi
 | [Compound engineering](compound-engineering.md) | 2026-11-11 | Plugin : MIT ; essais : tous droits réservés | Idée |
 | [Claude Code Tips (YK)](claude-code-tips-yk.md) | 2026-11-11 | Tous droits réservés | Idée |
 | [Documentation Claude Code](claude-code-docs.md) | 2026-11-11 | © Anthropic PBC, tous droits réservés | Idée |
+| [Conférences d'Erik S. (Anthropic)](anthropic-talks-erik.md) (2 vidéos) | 2026-11-11 | Pas de licence de réutilisation connue | Idée |
 
 > Les licences « mixtes » sont fréquentes : un article sous droits réservés accompagné d'un dépôt sous licence libre. Toute adaptation future doit alors partir **du dépôt**, jamais de l'article.
