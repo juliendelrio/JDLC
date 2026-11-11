@@ -9,3 +9,4 @@ Les notes sont écrites avec nos propres mots : une synthèse n'est pas une copi
 | Source | Date de consultation | Licence | Niveau |
 |---|---|---|---|
 | [SFEIR — SDLC piloté par l'IA (11 phases)](sfeir-sdlc-ai.md) | 2026-11-11 | Tous droits réservés | Idée |
+| [AI-Driven Dev — framework et manifeste](aidd.md) | 2026-11-11 | MIT (framework) ; CC BY 4.0 + MIT (manifeste) | Idée |

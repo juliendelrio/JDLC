@@ -40,6 +40,16 @@ Une approche **hybride** paraît la plus prometteuse :
 - une **distribution sous forme de plugin Claude Code** pour la partie outillage (option 1) ;
 - une **commande d'initialisation** pour poser les éléments projet dans le dépôt cible (option 2), éventuellement exposée par le plugin lui-même.
 
+### Mise à jour du 2026-11-11
+
+- **Périmètre réduit.** L'[ADR-0006](0006-claude-code-uniquement.md) limite JDLC à Claude Code : le besoin « ne pas être prisonnier d'un seul outil » et le « cœur indépendant de l'outil » ne sont plus des objectifs.
+- **Précédent concret.** Le framework [AIDD](../inspirations/aidd.md) se distribue exactement selon l'option 1 :
+  - le dépôt est une marketplace (`.claude-plugin/marketplace.json`), avec les plugins dans `plugins/` ;
+  - l'installation passe par `/plugin marketplace add` puis `/plugin install` ;
+  - le mémoire projet et l'onboarding sont générés par un skill dans le projet cible (option 2, portée par le plugin lui-même).
+
+L'orientation devient donc : **plugin(s) Claude Code distribués via la marketplace du dépôt JDLC, avec un skill d'initialisation pour les éléments projet.**
+
 ## Décision
 
 Reportée. On tranchera quand les premiers composants du SDLC existeront et qu'on pourra tester l'installation sur un vrai projet. La structure et les capacités exactes du système de plugins seront vérifiées dans la documentation officielle à jour au moment de décider.

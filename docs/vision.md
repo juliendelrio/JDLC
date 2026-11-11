@@ -20,6 +20,9 @@ JDLC est ma version de ce cycle.
 6. **L'humain garde la main.** Les agents proposent, l'humain décide aux étapes clés (validation de spec, de plan, de merge, de release).
 7. **Incrémental.** On commence petit (une ou deux phases outillées) et on étend.
 8. **Discipline de la preuve.** Un agent ne déclare jamais une étape terminée sur parole : il joint la sortie réelle qui le prouve (exécution des tests, build, lint, diff…). On fait confiance à la preuve, pas à l'affirmation. *(Inspiré de [SFEIR](inspirations/sfeir-sdlc-ai.md).)*
+9. **Ne pas déléguer ce qu'on ne sait pas évaluer.** L'humain ne confie à un agent que ce qu'il est capable de juger, et n'accepte pas un résultat qu'il ne comprend pas. *(Inspiré du [manifeste AIDD](inspirations/aidd.md).)*
+10. **Le contexte se traite comme du code.** Instructions (`CLAUDE.md`), règles, mémoire projet et specs sont versionnés, relus et maintenus avec le même soin que le code. *(Inspiré du [manifeste AIDD](inspirations/aidd.md).)*
+11. **Réparer le système avant de pousser le modèle.** Un échec de l'agent est un signal de diagnostic : avant d'insister ou de reformuler, on cherche ce qui manque dans le contexte ou le processus, et on le corrige durablement. *(Inspiré du [manifeste AIDD](inspirations/aidd.md) ; rejoint la capitalisation de [SFEIR](inspirations/sfeir-sdlc-ai.md).)*
 
 ## Périmètre (hypothèses de départ)
 
@@ -61,7 +64,8 @@ Un SDLC agentique ne convient pas à tout. Hypothèses de départ, à confirmer 
 
 - Le travail en équipe multi-personnes (JDLC vise d'abord un usage solo).
 - L'outillage lourd (serveur, base de données, interface web).
+- La compatibilité avec d'autres outils agentiques que Claude Code.
 
 ## Outillage cible
 
-Point de départ : **Claude Code**, l'outil que j'utilise au quotidien. Le contenu méthodologique (processus, gabarits, checklists) sera écrit en Markdown autant que possible indépendant de l'outil, afin de pouvoir l'adapter à d'autres agents plus tard. Voir [ADR-0005](adr/0005-mecanisme-installation.md).
+**Claude Code uniquement, pour l'instant** ([ADR-0006](adr/0006-claude-code-uniquement.md)). JDLC exploite librement ses fonctions natives : plugins et marketplace, skills, sous-agents, commandes, hooks, mémoire. Le contenu restant majoritairement du Markdown, une ouverture à d'autres outils reste possible plus tard, mais elle n'est pas un objectif. Installation : voir [ADR-0005](adr/0005-mecanisme-installation.md).

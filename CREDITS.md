@@ -11,6 +11,9 @@ Politique et définitions des niveaux (idée / adaptation / import) : [docs/lice
 | [Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) | Michael Nygard | Article de 2011 | — (non importé) | Idée | Le format ADR (contexte, décision, conséquences, statut) | [docs/adr/](docs/adr/README.md) |
 | [Un SDLC piloté par l'IA : le cycle SFEIR à 11 phases](https://www.sfeir.com/articles/sdlc-ai/) | SFEIR | 2026-06-16, mis à jour le 2026-09-21 (consulté le 2026-11-11) | © SFEIR, tous droits réservés | Idée | Discipline de la preuve (principe 8), phase de dépréciation, grille du domaine d'application. Pistes encore à l'étude : validations humaines, capitalisation en deux temps, phase Setup | [Vision](docs/vision.md), [note d'analyse](docs/inspirations/sfeir-sdlc-ai.md) |
 
+| [AI-Driven Dev Framework](https://github.com/ai-driven-dev/framework) | AI-Driven Dev contributors | commit `6f70b65` (2026-10-26) | MIT | Idée | Distribution par marketplace Claude Code (ADR-0005, ADR-0006). Pistes à l'étude : cycle Frame/Deliver/Check, 3 pauses selon le mode, vérificateur indépendant, mémoire projet, skill `learn`, anatomie des skills | [ADR-0005](docs/adr/0005-mecanisme-installation.md), [note d'analyse](docs/inspirations/aidd.md) |
+| [The Manifesto for AI-Driven Development](https://ai-driven-development.org) | AI-Driven Dev | v1.1.1, commit `b4a7fe2` | CC BY 4.0 (texte), MIT (code) | Idée | Principes 9 (ne pas déléguer ce qu'on ne sait pas évaluer), 10 (le contexte se traite comme du code) et 11 (réparer le système avant de pousser le modèle) | [Vision](docs/vision.md), [note d'analyse](docs/inspirations/aidd.md) |
+
 ## Sources à étudier
 
 Pistes identifiées, **pas encore analysées**. Les licences indiquées ici devront être vérifiées sur la version exacte au moment de toute reprise.

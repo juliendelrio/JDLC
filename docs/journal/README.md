@@ -8,3 +8,4 @@ Une entrée par session de travail significative : `AAAA-MM-JJ-sujet.md`.
 
 - [2026-11-11 — Lancement du projet](2026-11-11-lancement.md)
 - [2026-11-11 — Première source étudiée : SFEIR](2026-11-11-premiere-source-sfeir.md)
+- [2026-11-11 — AIDD, et le choix de Claude Code uniquement](2026-11-11-aidd-et-claude-code.md)

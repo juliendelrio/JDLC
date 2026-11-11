@@ -2,6 +2,8 @@
 
 JDLC is a public agentic SDLC, designed to be installed into other projects. Its design is documented for teaching purposes.
 
+JDLC targets **Claude Code only** for now (ADR-0006): use its native features (plugins, marketplace, skills, subagents, hooks) freely; do not spend effort on portability to other agentic tools.
+
 ## Language
 
 - Design documentation (`README.md`, `docs/`, `CREDITS.md`): **French**.

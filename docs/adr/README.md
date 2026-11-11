@@ -18,3 +18,4 @@ Un **ADR** (*Architecture Decision Record*) est une courte fiche qui documente u
 | [0003](0003-politique-inspirations-licences.md) | Politique d'inspiration et de licences | Accepté |
 | [0004](0004-licence-du-projet.md) | Licence du projet JDLC | Accepté |
 | [0005](0005-mecanisme-installation.md) | Mécanisme d'installation dans les projets | Proposé — à affiner |
+| [0006](0006-claude-code-uniquement.md) | Compatibilité : Claude Code uniquement (pour l'instant) | Accepté |
