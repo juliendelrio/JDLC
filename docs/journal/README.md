@@ -10,3 +10,4 @@ Une entrée par session de travail significative : `AAAA-MM-JJ-sujet.md`.
 - [2026-11-11 — Première source étudiée : SFEIR](2026-11-11-premiere-source-sfeir.md)
 - [2026-11-11 — AIDD, et le choix de Claude Code uniquement](2026-11-11-aidd-et-claude-code.md)
 - [2026-11-11 — Les publications d'Anthropic](2026-11-11-publications-anthropic.md)
+- [2026-11-11 — Analyse de toutes les sources listées](2026-11-11-analyse-des-sources.md)

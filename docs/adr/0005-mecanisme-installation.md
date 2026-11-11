@@ -46,9 +46,19 @@ Une approche **hybride** paraît la plus prometteuse :
 - **Précédent concret.** Le framework [AIDD](../inspirations/aidd.md) se distribue exactement selon l'option 1 :
   - le dépôt est une marketplace (`.claude-plugin/marketplace.json`), avec les plugins dans `plugins/` ;
   - l'installation passe par `/plugin marketplace add` puis `/plugin install` ;
-  - le mémoire projet et l'onboarding sont générés par un skill dans le projet cible (option 2, portée par le plugin lui-même).
+  - la mémoire projet et l'onboarding sont générés par un skill dans le projet cible (option 2, portée par le plugin lui-même).
 
 L'orientation devient donc : **plugin(s) Claude Code distribués via la marketplace du dépôt JDLC, avec un skill d'initialisation pour les éléments projet.**
+
+### Contraintes relevées dans la documentation de Claude Code (2026-11-11)
+
+Source : [note d'analyse](../inspirations/claude-code-docs.md).
+
+- **Un plugin ne peut livrer ni `CLAUDE.md`, ni `.claude/rules/`, ni règles de permissions.** Il peut livrer skills, agents, hooks, serveurs MCP et styles de sortie. Tout ce qui doit vivre dans le projet cible doit donc être écrit par un skill d'initialisation : l'approche hybride n'est pas un confort, c'est la seule voie.
+- **La version installée est enregistrée par machine**, pas dans le dépôt cible. Pour savoir quelle version de JDLC équipe un projet, l'initialisation devra écrire un marqueur.
+- **Versionnement** : une version fixée dans `plugin.json` doit être incrémentée à chaque publication, sinon personne ne reçoit la mise à jour. Pas de canaux natifs, pas d'état « déprécié », et un plugin publié ne doit pas être renommé.
+- **Coût en contexte** : la description de chaque skill invocable automatiquement est chargée à chaque tour, dans chaque projet où le plugin est actif. C'est un argument pour un JDLC petit.
+- **Préserver les adaptations locales** : Spec Kit (manifeste de hachages qui détecte les fichiers modifiés localement) et BMad (fichiers de surcharge séparés des fichiers installés) montrent deux solutions éprouvées pour la commande d'initialisation et de mise à jour.
 
 ## Décision
 

@@ -37,4 +37,4 @@ Seule l'idée 1 (simplification comme angle de revue explicite) est vraiment nou
 
 ## Piste à suivre
 
-Le **dépôt de conseils de YK** (au moins 38 conseils sur Claude Code) est cité dans la vidéo : à identifier et à étudier.
+Le **dépôt de conseils de YK** cité dans la vidéo a été identifié, avec une bonne confiance mais sans preuve formelle, comme [`ykdojo/claude-code-tips`](https://github.com/ykdojo/claude-code-tips). Au printemps 2026, le conseil n°38 de ce dépôt était bien « simplifier le code trop compliqué ». Voir la [note d'analyse](claude-code-tips-yk.md).
