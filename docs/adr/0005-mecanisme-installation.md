@@ -60,6 +60,16 @@ Source : [note d'analyse](../inspirations/claude-code-docs.md).
 - **Coût en contexte** : la description de chaque skill invocable automatiquement est chargée à chaque tour, dans chaque projet où le plugin est actif. C'est un argument pour un JDLC petit.
 - **Préserver les adaptations locales** : Spec Kit (manifeste de hachages qui détecte les fichiers modifiés localement) et BMad (fichiers de surcharge séparés des fichiers installés) montrent deux solutions éprouvées pour la commande d'initialisation et de mise à jour.
 
+### Précédents dans les dépôts d'Anthropic (2026-11-11)
+
+Source : [note d'analyse des plugins](../inspirations/anthropic-plugins.md).
+
+- **Le moteur dans le plugin, les règles dans le projet.** Le plugin livre un hook générique ; sa configuration vit dans un fichier du projet (`.claude/<plugin>.local.md` ou un fichier commité). Sans ce fichier, le hook ne fait rien. Cela répond en partie à la question « hook livré par le plugin ou posé par l'init ».
+- **Les hooks n'agissent que dans un projet concerné.** La revue de la marketplace officielle refuse un hook qui tourne partout sans vérifier le projet. Pour JDLC : un hook teste le marqueur d'initialisation et sort tout de suite s'il manque.
+- **Adaptations locales sur trois niveaux** : utilisateur, projet commité, projet local non commité. Les fichiers installés ne sont jamais modifiés à la main. Les préférences personnelles peuvent passer par `userConfig` dans `plugin.json`, les données persistantes par `${CLAUDE_PLUGIN_DATA}`.
+- **Une marketplace peut pointer vers un autre dépôt** (source `git-subdir`). Le dépôt JDLC peut donc rester la marketplace même si un plugin déménage.
+- **La configuration qui juge vient de la branche cible** dans la GitHub Action officielle ([note outillage](../inspirations/anthropic-tooling.md)). À garder en tête si JDLC fournit un jour une revue en CI.
+
 ## Décision
 
 Reportée. On tranchera quand les premiers composants du SDLC existeront et qu'on pourra tester l'installation sur un vrai projet. La structure et les capacités exactes du système de plugins seront vérifiées dans la documentation officielle à jour au moment de décider.

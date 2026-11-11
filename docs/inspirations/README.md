@@ -25,5 +25,13 @@ Les notes sont écrites avec nos propres mots : une synthèse n'est pas une copi
 | [Documentation Claude Code](claude-code-docs.md) | 2026-11-11 | © Anthropic PBC, tous droits réservés | Idée |
 | [Conférences d'Erik S. (Anthropic)](anthropic-talks-erik.md) (2 vidéos) | 2026-11-11 | Pas de licence de réutilisation connue | Idée |
 | [Single agent loop kit (Anthropic)](single-agent-loop-kit.md) | 2026-11-11 | Apache-2.0 | Idée |
+| [Anthropic — plugins et marketplaces](anthropic-plugins.md) (4 dépôts) | 2026-11-11 | Apache-2.0 (sauf exceptions notées) ; `claude-code` propriétaire | Idée |
+| [Anthropic — skills](anthropic-skills.md) (3 dépôts) | 2026-11-11 | Apache-2.0 par skill ; `doc-coauthoring` sans licence | Idée |
+| [Anthropic — agents de longue durée](anthropic-long-running.md) (4 dépôts) | 2026-11-11 | Apache-2.0, CC0, MIT (avec une réserve) | Idée |
+| [Anthropic — kits d'ingénierie](anthropic-engineering-kits.md) (4 dépôts) | 2026-11-11 | Apache-2.0, MIT | Idée |
+| [Anthropic — outillage](anthropic-tooling.md) (6 dépôts) | 2026-11-11 | MIT, Apache-2.0 ; un dépôt sans licence | Idée |
+| [Anthropic — cookbooks, démos et tutoriels](anthropic-cookbooks-demos.md) (6 dépôts) | 2026-11-11 | MIT, Apache-2.0, CC BY 4.0 ; deux dépôts sans licence | Idée |
+
+> Les notes « Anthropic — … » couvrent les dépôts publics du compte [github.com/anthropics](https://github.com/anthropics) qui touchent au développement avec Claude Code. Les SDK, les forks de projets tiers, les dépôts de recherche et les plugins métier (finance, droit, santé, commerce) ont été écartés.
 
 > Les licences « mixtes » sont fréquentes : un article sous droits réservés accompagné d'un dépôt sous licence libre. Toute adaptation future doit alors partir **du dépôt**, jamais de l'article.

@@ -21,7 +21,7 @@ JDLC targets **Claude Code only** for now (ADR-0006): use its native features (p
 Follow `docs/licences.md` strictly:
 
 - Every reused idea, adaptation, or import is recorded in `CREDITS.md`.
-- Before importing any third-party content, check its licence **at the exact commit/tag** being imported — never from memory.
+- Before importing any third-party content, check its licence **at the exact commit/tag and for the exact folder** being imported — never from memory, never from GitHub's licence label (repos often mix licences per folder).
 - JDLC is MIT-licensed (ADR-0004): only import content whose licence is compatible per the matrix in `docs/licences.md`.
 - Imported/adapted files carry the provenance header defined in `docs/licences.md`; licence texts go in `licenses/`.
 - When in doubt, do not import: rewrite from the idea only.

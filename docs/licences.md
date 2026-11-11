@@ -31,7 +31,7 @@ Décision associée : [ADR-0003](adr/0003-politique-inspirations-licences.md).
 ## 3. Procédure d'import
 
 1. **Identifier la version exacte** reprise : URL du dépôt + commit ou tag.
-2. **Lire la licence à cette version** (fichier `LICENSE`, en-têtes de fichiers, éventuel `NOTICE`). Ne jamais se fier à sa mémoire ni à une licence lue sur une autre version.
+2. **Lire la licence à cette version** (fichier `LICENSE`, en-têtes de fichiers, éventuel `NOTICE`). Ne jamais se fier à sa mémoire ni à une licence lue sur une autre version. Lire aussi **la licence du dossier exact** repris : un dépôt peut mêler plusieurs licences (fichier `LICENSE` par sous-dossier, README qui restreint l'usage, dossier propriétaire dans un dépôt libre). L'étiquette affichée par GitHub ne suffit pas.
 3. **Vérifier la compatibilité** avec la matrice ci-dessus.
 4. **Placer le contenu importé** avec un en-tête de provenance (format ci-dessous) ; conserver les mentions de copyright d'origine.
 5. **Copier le texte de licence** de la source dans `licenses/<source>-LICENSE` (et `NOTICE` le cas échéant).
