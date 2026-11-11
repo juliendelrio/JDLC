@@ -1,0 +1,9 @@
+# Journal de conception
+
+Le journal raconte la construction de JDLC, étape par étape : ce qu'on a essayé, ce qu'on a appris, ce qui a changé. Là où les [ADR](../adr/README.md) figent les décisions, le journal garde le récit.
+
+Une entrée par session de travail significative : `AAAA-MM-JJ-sujet.md`.
+
+## Entrées
+
+- [2026-11-11 — Lancement du projet](2026-11-11-lancement.md)
