@@ -10,3 +10,5 @@ Les notes sont écrites avec nos propres mots : une synthèse n'est pas une copi
 |---|---|---|---|
 | [SFEIR — SDLC piloté par l'IA (11 phases)](sfeir-sdlc-ai.md) | 2026-11-11 | Tous droits réservés | Idée |
 | [AI-Driven Dev — framework et manifeste](aidd.md) | 2026-11-11 | MIT (framework) ; CC BY 4.0 + MIT (manifeste) | Idée |
+| [Anthropic — publications sur le développement agentique](anthropic.md) (7 articles) | 2026-11-11 | © Anthropic PBC | Idée |
+| [Vidéo — Senior Engineer's best practices for using coding agents](video-senior-engineers-coding-agents.md) | 2026-11-11 | Pas de licence de réutilisation connue | Idée |
