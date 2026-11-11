@@ -19,6 +19,7 @@
 | [docs/adr/](docs/adr/README.md) | Registre des décisions d'architecture (ADR) |
 | [docs/licences.md](docs/licences.md) | Politique d'inspiration et de compatibilité des licences |
 | [CREDITS.md](CREDITS.md) | Registre des inspirations et des contenus importés |
+| [docs/inspirations/](docs/inspirations/README.md) | Notes d'analyse des sources étudiées |
 | [docs/journal/](docs/journal/README.md) | Journal de conception (le récit, étape par étape) |
 
 ## Licence

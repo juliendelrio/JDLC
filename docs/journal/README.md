@@ -7,3 +7,4 @@ Une entrée par session de travail significative : `AAAA-MM-JJ-sujet.md`.
 ## Entrées
 
 - [2026-11-11 — Lancement du projet](2026-11-11-lancement.md)
+- [2026-11-11 — Première source étudiée : SFEIR](2026-11-11-premiere-source-sfeir.md)
