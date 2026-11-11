@@ -69,3 +69,5 @@ Pistes secondaires relevées pendant les analyses, **pas encore étudiées**. Le
 | *Building agents: When to fold subagents into your main agent loop* (Anthropic) | Article associé au *single agent loop kit*, non lu | © Anthropic PBC |
 | *Effective Harnesses for Long-Running Agents* (Anthropic, novembre 2025) | Cité par `cwc-long-running-agents` ; absent de la note sur les publications d'Anthropic | © Anthropic PBC |
 | Article d'Anthropic sur le compilateur C écrit par Claude | Récit du harnais utilisé, absent du dépôt | © Anthropic PBC |
+| *The Scrum Guide* (Ken Schwaber, Jeff Sutherland), version 2020 | Éléments de backlog, définition de « terminé », incréments : inspiration du gabarit de ticket ([ADR-0008](docs/adr/0008-ticket-unite-de-travail.md)) | À vérifier (CC BY-SA annoncée, donc idée seulement) |
+| Méthode Kanban (David J. Anderson et al.) | Flux visible, limitation du travail en cours, états explicites, coordination entre instances | À vérifier |

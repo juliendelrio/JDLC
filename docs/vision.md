@@ -23,6 +23,7 @@ JDLC est ma version de ce cycle.
 9. **Ne pas déléguer ce qu'on ne sait pas évaluer.** L'humain ne confie à un agent que ce qu'il est capable de juger, et n'accepte pas un résultat qu'il ne comprend pas. *(Inspiré du [manifeste AIDD](inspirations/aidd.md).)*
 10. **Le contexte se traite comme du code.** Instructions (`CLAUDE.md`), règles, mémoire projet et specs sont versionnés, relus et maintenus avec le même soin que le code. *(Inspiré du [manifeste AIDD](inspirations/aidd.md).)*
 11. **Réparer le système avant de pousser le modèle.** Un échec de l'agent est un signal de diagnostic : avant d'insister ou de reformuler, on cherche ce qui manque dans le contexte ou le processus, et on le corrige durablement. *(Inspiré du [manifeste AIDD](inspirations/aidd.md) ; rejoint la capitalisation de [SFEIR](inspirations/sfeir-sdlc-ai.md).)*
+12. **Pensé pour l'équipe, utilisable seul.** Un développeur seul est le cas particulier d'une équipe ; et une même personne qui travaille depuis plusieurs environnements forme déjà une équipe. Tout élément de JDLC sait s'il appartient à l'**instance** (un environnement de travail) ou au **projet** (commun à toutes les instances). *([ADR-0007](adr/0007-concu-pour-l-equipe.md).)*
 
 ## Périmètre (hypothèses de départ)
 
@@ -60,9 +61,15 @@ Un SDLC agentique ne convient pas à tout. Hypothèses de départ, à confirmer 
 - les systèmes critiques soumis à certification (avionique, ferroviaire, médical…) ;
 - les projets manipulant des données sensibles sans règles claires sur ce que les agents peuvent voir.
 
+## Unité de travail
+
+L'unité de travail de JDLC est un **ticket** générique, inspiré de Kanban et de Scrum. Le propriétaire du projet choisit où vivent les tickets : dans le dépôt ou dans un outil de tickets (issues GitHub ou GitLab, Jira…). JDLC accède à chaque outil par un ensemble de skills dédié, et un projet ne charge que celui qui lui correspond. *([ADR-0008](adr/0008-ticket-unite-de-travail.md).)*
+
+La spec a deux niveaux. La **spec principale** est transverse : vision, grandes fonctionnalités, personas. La **spec de ticket** porte le travail en cours. Un **ticket parent** peut regrouper la spec partagée de plusieurs tickets. *([ADR-0009](adr/0009-spec-a-deux-niveaux.md).)*
+
 ## Hors périmètre (pour l'instant)
 
-- Le travail en équipe multi-personnes (JDLC vise d'abord un usage solo).
+- L'outillage organisationnel lourd : rôles, cérémonies imposées, tableaux de bord. Le travail en équipe est, lui, dans le périmètre ([ADR-0007](adr/0007-concu-pour-l-equipe.md)).
 - L'outillage lourd (serveur, base de données, interface web).
 - La compatibilité avec d'autres outils agentiques que Claude Code.
 

@@ -19,3 +19,7 @@ Un **ADR** (*Architecture Decision Record*) est une courte fiche qui documente u
 | [0004](0004-licence-du-projet.md) | Licence du projet JDLC | Accepté |
 | [0005](0005-mecanisme-installation.md) | Mécanisme d'installation dans les projets | Proposé — à affiner |
 | [0006](0006-claude-code-uniquement.md) | Compatibilité : Claude Code uniquement (pour l'instant) | Accepté |
+| [0007](0007-concu-pour-l-equipe.md) | Conçu pour l'équipe, utilisable seul | Accepté |
+| [0008](0008-ticket-unite-de-travail.md) | Le ticket comme unité de travail, stockage au choix | Accepté (principe) |
+| [0009](0009-spec-a-deux-niveaux.md) | Une spec à deux niveaux : principale et de ticket | Accepté (principe) |
+| [0010](0010-deux-memoires.md) | Deux mémoires : celle de l'utilisateur, celle du projet | Accepté (principe) |

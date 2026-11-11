@@ -12,3 +12,4 @@ Une entrée par session de travail significative : `AAAA-MM-JJ-sujet.md`.
 - [2026-11-11 — Les publications d'Anthropic](2026-11-11-publications-anthropic.md)
 - [2026-11-11 — Analyse de toutes les sources listées](2026-11-11-analyse-des-sources.md)
 - [2026-11-11 — Les dépôts publics d'Anthropic](2026-11-11-depots-anthropic.md)
+- [2026-11-11 — Synthèse croisée des sources](2026-11-11-synthese-croisee.md)

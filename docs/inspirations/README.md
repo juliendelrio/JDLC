@@ -2,6 +2,8 @@
 
 Une note par source étudiée : synthèse, idées retenues pour JDLC, idées écartées et pourquoi. Chaque source est aussi inscrite dans [CREDITS.md](../../CREDITS.md), avec son niveau de reprise et sa licence.
 
+La [synthèse croisée](../synthese-des-sources.md) rassemble ce sur quoi les notes convergent, ce sur quoi elles se contredisent, et ce qui reste à arbitrer.
+
 Les notes sont écrites avec nos propres mots : une synthèse n'est pas une copie. Les citations restent courtes et attribuées.
 
 ## Notes
