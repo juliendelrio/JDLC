@@ -23,3 +23,13 @@ Un **ADR** (*Architecture Decision Record*) est une courte fiche qui documente u
 | [0008](0008-ticket-unite-de-travail.md) | Le ticket comme unité de travail, stockage au choix | Accepté (principe) |
 | [0009](0009-spec-a-deux-niveaux.md) | Une spec à deux niveaux : principale et de ticket | Accepté (principe) |
 | [0010](0010-deux-memoires.md) | Deux mémoires : celle de l'utilisateur, celle du projet | Accepté (principe) |
+| [0011](0011-versionnement.md) | Versionner JDLC : 0.1.0 à la première implémentation, 1.0 après vérification par l'usage | Accepté |
+| [0012](0012-autonomie-gagnee.md) | Mode par défaut : supervisé, puis autonomie gagnée | Accepté (hypothèse) |
+| [0013](0013-validation-humaine-regles-memoire.md) | Les règles et la mémoire de projet changent sur validation humaine | Accepté (hypothèse) |
+| [0014](0014-profils-de-travail.md) | Dimensionner le processus par des profils de travail | Accepté (hypothèse) |
+| [0015](0015-mesure-minimale.md) | Mesurer JDLC : le minimum utile | Accepté (hypothèse) |
+| [0016](0016-comprendre-le-tronc.md) | Comprendre le tronc, accepter les feuilles sur preuve | Accepté (hypothèse) |
+| [0017](0017-cycle-complet.md) | Le cycle complet : portes humaines, rôles d'agents | Accepté (hypothèse) |
+| [0018](0018-exigences-de-qualite.md) | Exigences de qualité : un guide à tiroirs au cadrage, des règles garanties ensuite | Accepté (hypothèse) |
+
+> JDLC est en conception : la version 0.1.0 sera la première implémentation. Tant que la version est inférieure à 1.0, un ADR accepté est une hypothèse de travail, à vérifier par l'usage ([ADR-0011](0011-versionnement.md)).

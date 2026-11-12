@@ -70,6 +70,30 @@ Source : [note d'analyse des plugins](../inspirations/anthropic-plugins.md).
 - **Une marketplace peut pointer vers un autre dépôt** (source `git-subdir`). Le dépôt JDLC peut donc rester la marketplace même si un plugin déménage.
 - **La configuration qui juge vient de la branche cible** dans la GitHub Action officielle ([note outillage](../inspirations/anthropic-tooling.md)). À garder en tête si JDLC fournit un jour une revue en CI.
 
+### Skills par outil de tickets (2026-11-11)
+
+L'[ADR-0008](0008-ticket-unite-de-travail.md) prévoit un ensemble de skills par outil de tickets, dont un projet ne charge que le sien. Deux voies sont possibles.
+
+| | Un plugin par outil | Copie des skills par l'initialisation |
+|---|---|---|
+| Installation | `/plugin install`, depuis la marketplace JDLC | Le skill d'initialisation copie les fichiers dans `.claude/skills/` du projet |
+| Désinstallation | Une commande ; rien ne reste dans le dépôt | Suppression manuelle des fichiers, ou un skill de désinstallation à écrire |
+| Mise à jour | Par la version du plugin | À refaire par l'initialisation ; risque d'écraser une adaptation locale |
+| Partage en équipe | Le plugin est déclaré dans le `.claude/settings.json` commité du projet | Les fichiers sont commités, donc partagés d'office |
+| Adaptation locale | Par des fichiers de réglages séparés | Directe, mais elle diverge de la source |
+
+**Piste retenue par l'auteur : un plugin par outil.** C'est la voie la plus simple à désinstaller et à mettre à jour, et elle n'écrit rien dans le dépôt cible. À confirmer en construisant le premier.
+
+Précisions de l'auteur :
+
+- **Chaque plugin a un chemin d'accès par défaut et des chemins de secours.** Pour GitHub : la CLI (`gh`) d'abord ; si elle n'est pas disponible, le serveur MCP ; sinon l'API.
+- **Un vocabulaire générique, traduit par chaque plugin.** JDLC parle de « ticket » ; le plugin GitHub le traduit en « issue ». La liste des termes génériques et leur traduction par outil restent à écrire.
+- **L'initialisation demande quels outils sont disponibles** et n'installe que les plugins correspondants.
+
+### Version de JDLC (2026-11-11)
+
+La version 0.1.0 sera la première implémentation ([ADR-0011](0011-versionnement.md)). Le numéro sera porté par `plugin.json`.
+
 ## Décision
 
 Reportée. On tranchera quand les premiers composants du SDLC existeront et qu'on pourra tester l'installation sur un vrai projet. La structure et les capacités exactes du système de plugins seront vérifiées dans la documentation officielle à jour au moment de décider.

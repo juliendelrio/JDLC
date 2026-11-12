@@ -446,7 +446,7 @@ Elles n'apparaissent que dans une source, mais elles sont fortes. On les garde p
 
 ## 6. Ce que cette synthèse change pour la vision
 
-Rien n'est modifié tant que les arbitrages ne sont pas rendus. Voici ce qui pourrait changer selon les réponses :
+La relecture a déjà ajouté le principe 12 et la section « Unité de travail » (ADR 0007 à 0010). Le reste attend les arbitrages. Voici ce qui pourrait encore changer selon les réponses :
 
 - **Principe 6** : le nombre et la place des portes (A1), et le mode par défaut (A2).
 - **Principe 9** : préciser le zonage feuilles et tronc (A3).
@@ -456,3 +456,68 @@ Rien n'est modifié tant que les arbitrages ne sont pas rendus. Voici ce qui pou
   - « l'humain fixe l'oracle » (1.1) ;
   - « chaque composant est une hypothèse, testée avec et sans » (1.7) ;
   - « une garantie plutôt qu'une consigne pour ce qui compte » (1.10).
+
+## 7. Résultat de la revue par l'auteur (2026-11-11)
+
+L'auteur a relu les sections 2 et 3 dans un tableur. Cette section consigne ses réponses. Elles priment sur le texte des sections précédentes.
+
+### 7.1 Contradictions de la section 2
+
+Toutes les résolutions proposées sont **validées**, sauf la 2.16, qui est écartée. Quatre sont précisées :
+
+| # | Précision de l'auteur |
+|---|---|
+| 2.1 | Quand l'agent propose de changer un attendu, il **justifie à l'humain** pourquoi. |
+| 2.8 | La revue par un collègue ne réduit pas le nombre de revues automatiques. L'initialisation demande **la taille de l'équipe**, pour que les exigences de revue humaine soient réalistes. |
+| 2.10 | L'entretien sert pour un projet neuf, **et aussi au moment d'initialiser JDLC dans un projet existant**. |
+| 2.12 | D'accord pour les tests de skills : leur coût n'est pas un problème pour des contrôles faits une fois ([ADR-0015](adr/0015-mesure-minimale.md)). |
+| 2.16 | **Écarté.** L'auteur ne voit pas l'utilité d'un commit automatique en fin de session : une conversation locale peut être résumée sans perte de continuité. Le commit reste un acte voulu. |
+
+### 7.2 Arbitrages de la section 3
+
+| # | Décision | Trace |
+|---|---|---|
+| A1 | **Tranché le 2026-11-12, sur un schéma.** Un humain décide à six portes : le cadre, les priorités, le découpage de chaque lot, le plan des tickets du tronc, la pull request, la publication. Entre ces portes, des agents travaillent seuls, dans trois rôles : garant du cadre, réalisateur, vérificateur. | [ADR-0017](adr/0017-cycle-complet.md), [ADR-0018](adr/0018-exigences-de-qualite.md) |
+| A2 | Option 2 : autonomie gagnée. | [ADR-0012](adr/0012-autonomie-gagnee.md) |
+| A3 | Option 2 : comprendre le tronc, accepter les feuilles sur preuve. | [ADR-0016](adr/0016-comprendre-le-tronc.md) |
+| A4 | Option 2 : la mémoire de projet et les règles changent sur validation humaine, surtout pour informer l'humain. | [ADR-0010](adr/0010-deux-memoires.md), [ADR-0013](adr/0013-validation-humaine-regles-memoire.md) |
+| A5 | Option 1 : des profils nommés, selon le risque et la zone. | [ADR-0014](adr/0014-profils-de-travail.md) |
+| A6 | Option 3 : on ne décide pas maintenant, on testera sur le terrain avec le premier composant. | — |
+| A7 | Option 1 : mesure minimale. | [ADR-0015](adr/0015-mesure-minimale.md) |
+
+### 7.3 Points relevés par une relecture de toute la démarche
+
+- **La spec de ticket dans un outil de tickets fragilise l'oracle** (convergence 1.1). Décision : on ne fige pas davantage, mais les changements se font en « mode commentaire », pour garder un suivi ([ADR-0009](adr/0009-spec-a-deux-niveaux.md), précisions).
+- **Le lien entre les phases et le ticket n'est pas posé.** Les états du ticket sont-ils les phases ? Les portes sont-elles des changements d'état ? **À trancher plus tard.** Ce point pèse sur A1 et A6.
+- **Skills par outil de tickets** : un plugin par outil est la piste retenue, avec un chemin d'accès par défaut et des chemins de secours, et un vocabulaire générique traduit par outil ([ADR-0005](adr/0005-mecanisme-installation.md)).
+- **Utilisateur et instance forment un seul niveau**, par choix ([ADR-0007](adr/0007-concu-pour-l-equipe.md), précisions).
+- **JDLC n'a pas encore de version** : la 0.1.0 sera la première implémentation, et ses décisions sont des hypothèses jusqu'à la 1.0 ([ADR-0011](adr/0011-versionnement.md)).
+- **Appliquer notre propre règle « celui qui fait ne vérifie pas ».** Les notes ont été écrites par des sous-agents, et cette synthèse repose sur des extraits de ces notes. Un sondage a contrôlé neuf affirmations dans les dépôts clonés : huit sont confirmées, une n'a pas été retrouvée (la « promotion après 3 entrées » de `oncall-kit`). Les notes sur les articles et les vidéos n'ont pas été contrôlées. L'auteur prévoit une relecture complète.
+
+- **Une idée nouvelle de l'auteur** : JDLC doit décrire comment un agent propose de lui-même une amélioration. La voie : une *issue* dans le dépôt GitHub ([ADR-0013](adr/0013-validation-humaine-regles-memoire.md), précisions).
+
+### 7.4 Idées écartées « parce que solo », rouvertes
+
+L'[ADR-0007](adr/0007-concu-pour-l-equipe.md) retire le motif « JDLC est solo ». Ces idées, écartées ou réduites pour ce motif dans les notes, sont à réexaminer. Elles ne sont pas adoptées pour autant : certaines restent trop lourdes.
+
+| Idée | Note | Pourquoi la rouvrir |
+|---|---|---|
+| Epics, stories et échelle documentaire (PRD) | [bmad](inspirations/bmad.md) | Proche des tickets parents et de la spec principale (ADR-0009). BMad dit qu'un PRD sert quand plusieurs personnes doivent s'accorder. |
+| Backlog, *three amigos*, orientation équipe | [aidd](inspirations/aidd.md) | Le backlog rejoint le ticket comme unité de travail. |
+| Fichiers de « tâche prise », carnet d'idées priorisé | [anthropic-long-running](inspirations/anthropic-long-running.md) (n° 34 à 36) | Mécanisme de prise d'un ticket par une instance. |
+| Parallélisme : *worktrees*, file de fusion | [adlc](inspirations/adlc.md), [anthropic-long-running](inspirations/anthropic-long-running.md) | Plusieurs instances travaillent en même temps. |
+| Règles en couches (organisation, équipe, projet, phase) | [aws-ai-dlc](inspirations/aws-ai-dlc.md) (n° 6) | Rejoint les niveaux instance et projet. |
+| Revue en CI, approbation liée à un commit, configuration prise sur la branche cible | [anthropic-tooling](inspirations/anthropic-tooling.md) (n° 1, 6, 9), [anthropic-engineering-kits](inspirations/anthropic-engineering-kits.md) | En équipe, la revue passe par des PR. |
+| Correction automatique de la CI | [anthropic-tooling](inspirations/anthropic-tooling.md) (n° 11) | Jugée « acceptable en solo, risquée ailleurs » : le risque est maintenant le cas normal. |
+| Portée d'installation *project*, réglages gérés | [claude-code-docs](inspirations/claude-code-docs.md) | La portée *project* devient le choix naturel pour une équipe. |
+| *Agent teams* de Claude Code | [claude-code-docs](inspirations/claude-code-docs.md) | À relire avec le cadrage équipe. |
+| Capacités d'équipe et indicateurs d'équipe | [dora-2025](inspirations/dora-2025.md) | Transposés au solo dans la note ; à relire dans leur sens d'origine. |
+| Leçons partagées à l'échelle de l'équipe (*Compound Packs*) | [compound-engineering](inspirations/compound-engineering.md) | Rejoint la mémoire de projet (ADR-0010). |
+| Propriétaires nommés du contexte, actifs partagés | [google-new-sdlc](inspirations/google-new-sdlc.md), [single-agent-loop-kit](inspirations/single-agent-loop-kit.md) | Qui possède les règles et les skills du projet. |
+| Partage de specs entre dépôts, *steering* d'équipe | [kiro](inspirations/kiro.md) (n° 15) | Spec principale partagée entre plusieurs dépôts. |
+| Rôles d'équipe | [sfeir-sdlc-ai](inspirations/sfeir-sdlc-ai.md) | On gardait les responsabilités sans les rôles ; à revoir si l'équipe est réelle. |
+| Surcharges par équipe, presets | [spec-kit](inspirations/spec-kit.md) | Adaptations locales à plusieurs niveaux. |
+| Plan unique qui grossit | [compound-engineering](inspirations/compound-engineering.md) (n° 10) | Retenu « pour éviter la multiplication d'artefacts en solo » : à confronter à la spec de ticket. |
+| Relecture humaine du diff | [adlc](inspirations/adlc.md) | Relativisée pour le solo ; en équipe, la revue par un collègue change la question (voir A3). |
+
+Restent écartés, même en équipe : les rituels imposés (*mob*), les personas nommés, l'infrastructure hébergée, les fonctions de conformité d'entreprise.

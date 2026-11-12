@@ -40,3 +40,9 @@ Le développement agentique s'accorde bien avec les méthodes agiles. Kanban app
 - **Le stockage dans le dépôt reste le défaut** quand il n'y a pas d'outil de tickets. Ce sont alors des fichiers versionnés, au niveau projet.
 - Restent à concevoir : le gabarit de ticket, ses états et son cycle de vie, le premier outil pris en charge, et le format de la configuration du projet. Kanban et Scrum sont ajoutés aux sources à étudier pour cela.
 - La spec se répartit entre le projet et les tickets : voir l'[ADR-0009](0009-spec-a-deux-niveaux.md).
+
+## Précisions du 2026-11-11
+
+- **« Un seul écrivain par ticket » et « permission explicite pour écrire » sont des règles pour les agents.** Pour les humains, c'est l'outil de tickets qui garantit les droits.
+- **Le lien entre les phases de JDLC et le cycle de vie du ticket n'est pas décidé.** Les états du ticket sont-ils les phases ? Les portes humaines sont-elles des changements d'état ? À trancher plus tard.
+- **Un ensemble de skills par outil de tickets** : la piste retenue est un plugin par outil dans la marketplace JDLC. Chaque plugin traduit le vocabulaire générique de JDLC dans celui de l'outil (un ticket est une *issue* dans GitHub) et a un chemin d'accès par défaut et des chemins de secours. Voir l'[ADR-0005](0005-mecanisme-installation.md).

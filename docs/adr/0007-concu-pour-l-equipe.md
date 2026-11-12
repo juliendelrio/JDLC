@@ -38,3 +38,15 @@ Tout élément de JDLC (artefact, état, réglage, mémoire, règle) appartient 
 - **Plusieurs instances peuvent travailler en même temps.** Il faut éviter deux écrivains sur le même travail : une unité de travail est prise par une seule instance à la fois (voir [ADR-0008](0008-ticket-unite-de-travail.md)).
 - Les méthodes agiles, faites pour des équipes, deviennent des sources pertinentes. Elles sont ajoutées aux sources à étudier.
 - On ne reprend pas l'outillage organisationnel lourd (rôles, cérémonies imposées, tableaux de bord). Les sources qui l'écartaient « parce que solo » sont à relire avec ce nouveau cadrage.
+
+## Précisions du 2026-11-11
+
+- **L'utilisateur et l'instance sont un seul niveau, par choix.** Rien ne permet aujourd'hui de faire suivre les préférences d'une personne entre ses environnements : la mémoire de Claude Code est enregistrée par machine. On ne construit pas de synchronisation. Chaque instance est donc traitée comme un développeur à part entière.
+- **Les préférences de travail sont des réglages d'instance**, pas des règles de JDLC. Exemple : « ne commiter que sur demande ».
+- **L'initialisation demande la taille de l'équipe**, pour que les exigences de revue humaine restent réalistes. La revue par un collègue ne remplace pas les revues automatiques : elle s'y ajoute.
+- **Les idées écartées « parce que solo » sont rouvertes.** Leur liste est dans la [synthèse](../synthese-des-sources.md), section 7.
+
+## Précisions du 2026-11-12
+
+- **Chaque rôle du cycle dit s'il est tenu par un humain ou par un agent.** L'humain d'une porte n'est pas forcément le même que celui d'une autre.
+- **JDLC propose des profils humains types pour chaque porte** (responsable de produit, designer, développeur, ou tout autre archétype), pour aider à trouver la bonne compétence quand c'est possible. Leur liste reste à concevoir. Voir l'[ADR-0017](0017-cycle-complet.md).

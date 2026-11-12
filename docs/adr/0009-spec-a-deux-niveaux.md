@@ -36,3 +36,20 @@ La spec est séparée en deux niveaux :
 - **Il reste à décider où vit la spec principale** (le dépôt semble naturel, car elle évolue lentement et se relit comme du code) et **ce qui remonte d'une spec de ticket vers la spec principale** quand le ticket se termine. Spec Kit distingue plusieurs modèles de conservation (remontée, nouvelle spec à chaque changement, spec vivante, constitution seule). Ce sera l'objet d'un ADR au moment de concevoir la phase Spécification.
 - **L'oracle reste fixé par l'humain** (convergence 1.1 de la synthèse). Les critères d'acceptation d'une spec de ticket sont validés par l'humain avant la construction.
 - **Les tickets parents posent la question de la coordination** entre plusieurs instances ou développeurs. Elle sera étudiée avec Kanban et Scrum.
+
+## Précisions du 2026-11-11
+
+Une relecture a relevé un risque : une spec de ticket rangée dans un outil de tickets peut être modifiée par d'autres, et n'est pas versionnée avec le code. Cela fragilise l'idée d'un attendu fixé par l'humain.
+
+Décision de l'auteur : **on ne fige pas davantage la spec de ticket.** En revanche, **les changements doivent laisser une trace** : on travaille en « mode commentaire ». Une modification de la spec de ticket passe par un commentaire, ou s'accompagne d'un commentaire, qui dit ce qui change et pourquoi. L'historique reste ainsi lisible par l'humain comme par l'agent.
+
+Conséquences :
+
+- Un agent qui propose de changer un attendu **justifie le changement à l'humain** (voir la contradiction 2.1 de la [synthèse](../synthese-des-sources.md)).
+- Avant de s'appuyer sur une spec de ticket, l'agent lit aussi les changements survenus depuis sa dernière lecture.
+- La forme exacte du suivi dépend de l'outil de tickets et du stockage choisi. Elle reste à concevoir.
+
+## Précisions du 2026-11-12
+
+- **La validation humaine des critères d'acceptation se fait une fois par lot**, à la porte du découpage, et non ticket par ticket. Avant elle, un agent autre que le rédacteur relit chaque spec de ticket. Voir l'[ADR-0017](0017-cycle-complet.md).
+- **Les exigences de qualité rejoignent le cadre**, à côté de la spec principale et de la conception. Voir l'[ADR-0018](0018-exigences-de-qualite.md).

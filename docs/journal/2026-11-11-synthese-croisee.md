@@ -47,7 +47,29 @@ Une quatrième décision a suivi, sur la mémoire :
 
 La leçon de méthode : **une convergence entre sources qui partagent le même biais n'est pas une preuve.** Il faut se demander pour quel contexte chaque source a été écrite.
 
+## La revue par l'auteur
+
+L'auteur a relu les contradictions et les arbitrages dans un tableur. Le résultat est consigné dans la section 7 de la synthèse.
+
+- Les 17 résolutions proposées sont validées, sauf le commit automatique en fin de session, écarté : une conversation locale se résume sans perte de continuité.
+- Quatre arbitrages sont rendus : autonomie gagnée ([ADR-0012](../adr/0012-autonomie-gagnee.md)), validation humaine des règles et de la mémoire de projet ([ADR-0013](../adr/0013-validation-humaine-regles-memoire.md)), profils de travail ([ADR-0014](../adr/0014-profils-de-travail.md)), mesure minimale ([ADR-0015](../adr/0015-mesure-minimale.md)).
+- Trois arbitrages étaient mal expliqués : les portes humaines, le principe 9 face au zonage feuilles et tronc, et le poids de JDLC. **Une question mal expliquée ne peut pas être arbitrée** : c'est un défaut de la synthèse, pas du lecteur. Une fois réexpliqués :
+  - le principe 9 adopte le zonage : comprendre le tronc, accepter les feuilles sur preuve ([ADR-0016](../adr/0016-comprendre-le-tronc.md)) ;
+  - le poids de JDLC sera jugé sur le terrain, avec le premier composant ;
+  - les portes attendent un schéma du workflow complet. L'auteur veut voir où sont les arrêts et ce qui tourne en autonomie, pour garder de la fluidité.
+- Les skills par outil de tickets seront **un plugin par outil**, avec un chemin d'accès par défaut et des chemins de secours (pour GitHub : CLI, puis MCP, puis API).
+- Une idée nouvelle : JDLC doit décrire comment un agent propose de lui-même une amélioration, par une *issue* dans le dépôt GitHub.
+
+## Une relecture de toute la démarche
+
+Après un changement de modèle, l'auteur a demandé une relecture critique de toute la discussion. Elle a relevé :
+
+- **un trou de conception** : une spec de ticket rangée dans un outil de tickets peut être modifiée par d'autres. Décision : ne pas figer davantage, mais travailler en « mode commentaire » pour garder la trace des changements ;
+- **des ajouts de l'agent dans des ADR acceptés**, que l'auteur n'avait pas validés. Ils ont été soumis et précisés ;
+- **un écart avec notre propre règle** « celui qui fait ne vérifie pas » : les notes et la synthèse n'avaient pas été contrôlées. Un sondage a confirmé huit affirmations sur neuf. La règle est maintenant écrite dans le `CLAUDE.md` du projet ;
+- **un écart avec le principe 1** (empirique) : beaucoup de décisions, aucun composant. Réponse de l'auteur : la première implémentation fera la version 0.1.0, et c'est la vérification par l'usage qui permettra la 1.0 ([ADR-0011](../adr/0011-versionnement.md)).
+
 ## Suites
 
-- Rendre les arbitrages, puis mettre à jour la vision (principes 6, 9 et 11, et peut-être de nouveaux principes).
+- Arbitrer les portes humaines sur le schéma du workflow, puis mettre à jour le principe 6 de la vision.
 - Choisir le premier composant et trancher par ADR la question « construire, importer, ou surcouche ».
