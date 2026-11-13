@@ -91,7 +91,7 @@ Rouge : un humain doit agir. Vert : un agent travaille. Blanc : personne n'agit.
 
 | Niveau | Ce que c'est | Représentation générique |
 |---|---|---|
-| Produit | Le cadre : spec principale, conception, exigences de qualité | À décider avec l'artefact « cadre » |
+| Produit | Le cadre : spec principale, conception, exigences de qualité | Trois fichiers et des décisions ([ADR-0020](0020-le-cadre-comme-artefact.md)) |
 | Lot | Les fonctionnalités retenues pour une version | Un regroupement propre à l'outil de tickets |
 | Fonctionnalité | La spec partagée de plusieurs tickets | Un ticket parent ([ADR-0009](0009-spec-a-deux-niveaux.md)) |
 | Ticket | L'unité de travail d'un agent réalisateur | Un ticket |

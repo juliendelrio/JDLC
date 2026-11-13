@@ -23,6 +23,8 @@ JDLC targets **Claude Code only** for now (ADR-0006): use its native features (p
 - The work unit is a generic ticket whose storage the project owner chooses (ADR-0008). The spec has two levels: main spec and ticket spec (ADR-0009).
 - JDLC covers the whole production cycle, not only the ticket: human gates and agent roles are defined in ADR-0017. When describing the cycle, say "a human" or "an agent" (never address the reader), and state for every role whether it is held by a human or by an agent.
 - While the frame is being built (framing, architecture, quality requirements), JDLC guides and advises the human and does not block. Once the frame is validated, JDLC guarantees its rules during the automated and implementation steps, and may block there (ADR-0018).
+- JDLC must be as easy to use as possible: it says what it does and does what it says, explains each decision it asks of a human, and points to the documentation when useful. The human always understands what they are doing (ADR-0021).
+- The meaning of JDLC's words is fixed by `docs/glossaire.md`: use them in that sense.
 - Project memory and rules change only with the human's validation: propose, do not apply (ADR-0013). User-specific learnings stay in Claude Code's own memory (ADR-0010).
 - Personal working preferences (such as "commit only when asked") are instance settings, not JDLC rules.
 

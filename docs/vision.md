@@ -18,30 +18,33 @@ JDLC est ma version de ce cycle.
 4. **Pédagogique.** La documentation doit permettre à quelqu'un d'extérieur de comprendre comment le SDLC a été conçu et de reproduire la démarche.
 5. **Installable et versionné.** Le SDLC se distribue vers des projets cibles ; il doit pouvoir être mis à jour sans écraser les adaptations locales.
 6. **L'humain garde la main.** Les agents proposent, un humain décide à des portes peu nombreuses et connues d'avance : le cadre, les priorités, le découpage de chaque lot, le plan des tickets du tronc, la pull request, la publication. Entre ces portes, les agents travaillent seuls. Au moment du cadrage et de l'architecture, JDLC guide et conseille l'humain sans le bloquer. Une fois le cadre validé, il est garant de ses règles dans les étapes automatisées et d'implémentation, et là il peut bloquer ([ADR-0017](adr/0017-cycle-complet.md), [ADR-0018](adr/0018-exigences-de-qualite.md)).
-7. **Incrémental.** On commence petit (une ou deux phases outillées) et on étend.
+7. **Incrémental.** On commence petit et on étend. La première implémentation n'outille que les étapes où des agents travaillent seuls ([ADR-0011](adr/0011-versionnement.md)).
 8. **Discipline de la preuve.** Un agent ne déclare jamais une étape terminée sur parole : il joint la sortie réelle qui le prouve (exécution des tests, build, lint, diff…). On fait confiance à la preuve, pas à l'affirmation. *(Inspiré de [SFEIR](inspirations/sfeir-sdlc-ai.md).)*
 9. **Ne pas déléguer ce qu'on ne sait pas évaluer.** L'humain ne confie à un agent que ce qu'il est capable de juger, et n'accepte pas un résultat qu'il ne comprend pas. Ce qu'il doit comprendre dépend de la zone : le code du **tronc**, dont le reste dépend, se comprend avant d'être accepté ; une **feuille**, dont rien ne dépend, peut être acceptée sur preuve de son comportement ([ADR-0016](adr/0016-comprendre-le-tronc.md)). *(Inspiré du [manifeste AIDD](inspirations/aidd.md) et des [conférences d'Erik S.](inspirations/anthropic-talks-erik.md))*
 10. **Le contexte se traite comme du code.** Instructions (`CLAUDE.md`), règles, mémoire projet et specs sont versionnés, relus et maintenus avec le même soin que le code. *(Inspiré du [manifeste AIDD](inspirations/aidd.md).)*
 11. **Réparer le système avant de pousser le modèle.** Un échec de l'agent est un signal de diagnostic : avant d'insister ou de reformuler, on cherche ce qui manque dans le contexte ou le processus, et on le corrige durablement. L'agent **propose** la correction ; les règles et la mémoire de projet ne changent qu'avec la validation de l'humain ([ADR-0013](adr/0013-validation-humaine-regles-memoire.md)). *(Inspiré du [manifeste AIDD](inspirations/aidd.md) ; rejoint la capitalisation de [SFEIR](inspirations/sfeir-sdlc-ai.md).)*
 12. **Pensé pour l'équipe, utilisable seul.** Un développeur seul est le cas particulier d'une équipe ; et une même personne qui travaille depuis plusieurs environnements forme déjà une équipe. Tout élément de JDLC sait s'il appartient à l'**instance** (un environnement de travail) ou au **projet** (commun à toutes les instances). *([ADR-0007](adr/0007-concu-pour-l-equipe.md).)*
+13. **Dire ce qu'on fait, faire ce qu'on dit.** JDLC doit être le plus simple possible à utiliser. Il annonce ce qu'il va faire, accompagne l'humain, l'explique et le renvoie vers la documentation quand c'est utile. L'humain comprend toujours ce qu'il fait ([ADR-0021](adr/0021-accompagner-l-humain.md)).
 
 ## Périmètre (hypothèses de départ)
 
-JDLC couvre tout le cycle de production d'un logiciel, pas seulement le ticket. La section « Le cycle » dit comment ces phases s'enchaînent.
+JDLC couvre tout le cycle de production d'un logiciel, pas seulement le ticket.
+
+Les **phases** disent quelles questions JDLC traite. Les **étapes** du cycle, décrites dans la section « Le cycle », disent comment le travail se déroule. Le sens des mots est fixé par le [glossaire](glossaire.md).
 
 Phases candidates, **à confirmer par l'usage** :
 
-| Phase | Question à laquelle elle répond |
-|---|---|
-| Cadrage | Quel problème, pour qui, quels critères de succès ? |
-| Spécification | Que doit faire le logiciel, précisément ? |
-| Conception | Comment va-t-on le construire ? |
-| Planification | En quelles tâches découpe-t-on le travail ? |
-| Implémentation | Le code et ses tests |
-| Revue & vérification | Est-ce correct, sûr, conforme à la spec ? |
-| Livraison | Comment on publie et on déploie |
-| Retour d'expérience | Qu'est-ce qu'on améliore dans le SDLC lui-même ? |
-| Dépréciation | Quel code, quelle fonctionnalité retirer, et comment le faire proprement ? |
+| Phase | Question à laquelle elle répond | Étape du cycle qui la traite |
+|---|---|---|
+| Cadrage | Quel problème, pour qui, quels critères de succès ? | 1. Cadrer et concevoir |
+| Spécification | Que doit faire le logiciel, précisément ? | 1. Cadrer et concevoir, puis 3. Découper (spec de ticket) |
+| Conception | Comment va-t-on le construire ? | 1. Cadrer et concevoir |
+| Planification | En quelles tâches découpe-t-on le travail ? | 2. Prioriser et 3. Découper |
+| Implémentation | Le code et ses tests | 4. Réaliser |
+| Revue & vérification | Est-ce correct, sûr, conforme à la spec ? | 4. Réaliser, puis 5. Préparer la version (recette du lot) |
+| Livraison | Comment on publie et on déploie | 5. Préparer la version |
+| Retour d'expérience | Qu'est-ce qu'on améliore dans le SDLC lui-même ? | 6. Rétrospective |
+| Dépréciation | Quel code, quelle fonctionnalité retirer, et comment le faire proprement ? | Pas encore placée dans le cycle |
 
 Le retour d'expérience est essentiel : c'est lui qui fait évoluer JDLC à partir de l'expérience.
 
@@ -75,6 +78,8 @@ Le cycle a trois niveaux : le **produit**, le **lot** (une version ou un jalon) 
 6. **Rétrospective du lot.** Un humain et un agent examinent le produit, le cadre et le processus. Les propositions faites au fil de l'eau par les agents l'alimentent.
 
 Un défaut, une urgence ou une petite demande entre directement comme ticket, par un chemin court.
+
+Le **cadre** tient en trois fichiers (produit, conception, qualité) et des décisions. Un humain choisit où il vit, par défaut dans le dépôt. Il ne change que sur décision d'un humain. *([ADR-0020](adr/0020-le-cadre-comme-artefact.md).)*
 
 Les exigences de qualité (sécurité, vie privée, accessibilité, éco-conception, conformité…) se choisissent dans un guide à tiroirs : JDLC les propose, l'humain décide. *([ADR-0018](adr/0018-exigences-de-qualite.md).)*
 

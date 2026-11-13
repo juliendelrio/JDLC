@@ -6,7 +6,12 @@ Un **ADR** (*Architecture Decision Record*) est une courte fiche qui documente u
 
 - Un fichier par décision : `NNNN-titre-court.md`, numérotation continue.
 - Statuts : `Proposé` → `Accepté` | `Rejeté` ; un ADR accepté peut devenir `Remplacé par ADR-XXXX`.
+- Un statut `Accepté` peut porter une mention entre parenthèses :
+  - *(principe)* : le principe est décidé, le détail reste à concevoir ;
+  - *(hypothèse)* : la décision est à vérifier par l'usage, comme tout ADR tant que JDLC n'est pas en version 1.0 ([ADR-0011](0011-versionnement.md)).
 - On ne réécrit pas un ADR accepté : on en crée un nouveau qui le remplace. L'historique des raisonnements fait partie de la valeur pédagogique.
+- Quand l'auteur clarifie ou complète une décision sans la renverser, il ajoute à l'ADR une section datée « Précisions du AAAA-MM-JJ ».
+- Le sens des mots est fixé par le [glossaire](../glossaire.md).
 - Gabarit : [template.md](template.md).
 
 ## Index
@@ -32,5 +37,7 @@ Un **ADR** (*Architecture Decision Record*) est une courte fiche qui documente u
 | [0017](0017-cycle-complet.md) | Le cycle complet : portes humaines, rôles d'agents | Accepté (hypothèse) |
 | [0018](0018-exigences-de-qualite.md) | Exigences de qualité : un guide à tiroirs au cadrage, des règles garanties ensuite | Accepté (hypothèse) |
 | [0019](0019-etats-et-gabarit-du-ticket.md) | Le ticket : ses états, ses portes, son gabarit | Accepté (hypothèse) |
+| [0020](0020-le-cadre-comme-artefact.md) | Le cadre comme artefact : où il vit, sa forme, qui le change | Accepté (hypothèse) |
+| [0021](0021-accompagner-l-humain.md) | Accompagner l'humain : dire ce qu'on fait, faire ce qu'on dit | Accepté (hypothèse) |
 
 > JDLC est en conception : la version 0.1.0 sera la première implémentation. Tant que la version est inférieure à 1.0, un ADR accepté est une hypothèse de travail, à vérifier par l'usage ([ADR-0011](0011-versionnement.md)).

@@ -184,3 +184,4 @@ Six points tranchés après la relecture de cohérence. Le détail est dans l'[A
 - **Tests d'acceptation** : ils sont écrits avant la réalisation, sur le modèle du développement piloté par les tests.
 - **Départ supervisé** : chaque arrêt passe le ticket à l'état « bloqué », avec une question à un humain.
 - **Fusion** : un humain la décide. Il peut la faire lui-même ou la demander à un agent, qui l'exécute et met les états à jour. Le bilan s'ajoute au ticket juste après.
+- **La conception, et le cadre en général, sont définis** par l'[ADR-0020](0020-le-cadre-comme-artefact.md). Ce point ne fait plus partie de ce qui reste à concevoir.

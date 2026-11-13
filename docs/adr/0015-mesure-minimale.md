@@ -31,3 +31,7 @@ Le principe 1 demande de savoir si un composant aide. Les méthodes d'évaluatio
 
 - **Les trois indicateurs sont choisis** : la part des pull requests qu'un humain fait corriger, le temps d'attente d'une pull request avant sa relecture par un humain, les défauts trouvés après fusion. Voir l'[ADR-0017](0017-cycle-complet.md).
 - Ils se lisent dans la forge (pull requests, tickets) plus que dans git seul. La façon de les relever reste à concevoir.
+
+## Précisions du 2026-11-13
+
+- **Piste d'amélioration : estimer le coût en tokens de JDLC dans son ensemble**, et pas seulement celui d'un module optionnel. L'estimation se construit empiriquement, par la mesure sur de vrais projets. Elle permet de dire à un humain ce que le framework lui coûte ([ADR-0021](0021-accompagner-l-humain.md)). La méthode reste à concevoir.

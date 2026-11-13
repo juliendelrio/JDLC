@@ -16,6 +16,7 @@
 | Document | Contenu |
 |---|---|
 | [docs/vision.md](docs/vision.md) | Vision, principes directeurs, périmètre |
+| [docs/glossaire.md](docs/glossaire.md) | Le sens des mots de JDLC : humain, agent, porte, cadre, lot, ticket… |
 | [docs/adr/](docs/adr/README.md) | Registre des décisions d'architecture (ADR) |
 | [docs/licences.md](docs/licences.md) | Politique d'inspiration et de compatibilité des licences |
 | [CREDITS.md](CREDITS.md) | Registre des inspirations et des contenus importés |

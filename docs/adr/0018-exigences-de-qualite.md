@@ -50,3 +50,8 @@ Les pratiques complémentaires :
 - La limite est nette : JDLC ne bloque pas le **choix** des règles, il bloque leur **non-respect**. Une règle ne se change qu'en revenant au cadre, devant un humain.
 - Restent à concevoir : le contenu de chaque tiroir, la façon dont un agent les propose sans alourdir le cadrage, et la trace laissée quand un humain écarte une pratique.
 - Les outils de contrôle (intégration continue, analyse statique, détection de secrets, surveillance) restent ceux du projet cible.
+
+## Précisions du 2026-11-13
+
+- **Les exigences de qualité vivent dans le fichier `qualite.md` du cadre**, qui garde aussi les tiroirs écartés ([ADR-0020](0020-le-cadre-comme-artefact.md)).
+- **Quand JDLC fait respecter une règle, il explique à l'humain pourquoi un ticket n'avance pas** ([ADR-0021](0021-accompagner-l-humain.md)).

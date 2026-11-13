@@ -54,3 +54,9 @@ Conséquences :
 - **La validation humaine des critères d'acceptation se fait à la porte du découpage**, avant la construction. L'humain peut valider tout un lot d'un coup, ou ticket par ticket. Avant elle, un agent autre que le rédacteur relit chaque spec de ticket. Voir l'[ADR-0017](0017-cycle-complet.md).
 - **Les exigences de qualité rejoignent le cadre**, à côté de la spec principale et de la conception. Voir l'[ADR-0018](0018-exigences-de-qualite.md).
 - **Après la validation humaine, un agent ne change pas un critère d'acceptation.** Si un changement est nécessaire, il repasse par un humain. Le reste de la spec de ticket continue d'évoluer en « mode commentaire ». Voir l'[ADR-0019](0019-etats-et-gabarit-du-ticket.md).
+
+## Précisions du 2026-11-13
+
+- **L'emplacement de la spec principale est décidé** par l'[ADR-0020](0020-le-cadre-comme-artefact.md) : un humain le choisit à la configuration, et c'est le dépôt par défaut.
+- **Rien ne remonte seul d'une spec de ticket vers la spec principale.** Un agent propose le changement, un humain décide, et la proposition est tracée dans le ticket.
+- **Une spec de ticket renvoie au cadre par des références stables**, sans recopier.
