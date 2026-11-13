@@ -30,3 +30,7 @@ Les sources mettent pourtant la capitalisation au cœur du cycle (convergence 1.
   - **qui écrit dans la mémoire de projet, et quand** : librement, ou sur proposition validée (arbitrage A4 de la synthèse) ;
   - son emplacement et son format ;
   - comment elle est chargée sans alourdir le contexte toujours présent.
+
+## Précisions du 2026-11-12
+
+- **« Qui écrit dans la mémoire de projet, et quand » est tranché** par l'[ADR-0013](0013-validation-humaine-regles-memoire.md) : un agent propose, un humain valide. L'emplacement, le format et le chargement restent à décider.

@@ -488,7 +488,7 @@ Toutes les résolutions proposées sont **validées**, sauf la 2.16, qui est éc
 ### 7.3 Points relevés par une relecture de toute la démarche
 
 - **La spec de ticket dans un outil de tickets fragilise l'oracle** (convergence 1.1). Décision : on ne fige pas davantage, mais les changements se font en « mode commentaire », pour garder un suivi ([ADR-0009](adr/0009-spec-a-deux-niveaux.md), précisions).
-- **Le lien entre les phases et le ticket n'est pas posé.** Les états du ticket sont-ils les phases ? Les portes sont-elles des changements d'état ? **À trancher plus tard.** Ce point pèse sur A1 et A6.
+- **Le lien entre les phases et le ticket n'est pas posé.** Les états du ticket sont-ils les phases ? Les portes sont-elles des changements d'état ? **Tranché le 2026-11-12** par l'[ADR-0019](adr/0019-etats-et-gabarit-du-ticket.md) : les états du ticket ne sont pas les phases, et une porte est un changement d'état réservé à un humain.
 - **Skills par outil de tickets** : un plugin par outil est la piste retenue, avec un chemin d'accès par défaut et des chemins de secours, et un vocabulaire générique traduit par outil ([ADR-0005](adr/0005-mecanisme-installation.md)).
 - **Utilisateur et instance forment un seul niveau**, par choix ([ADR-0007](adr/0007-concu-pour-l-equipe.md), précisions).
 - **JDLC n'a pas encore de version** : la 0.1.0 sera la première implémentation, et ses décisions sont des hypothèses jusqu'à la 1.0 ([ADR-0011](adr/0011-versionnement.md)).

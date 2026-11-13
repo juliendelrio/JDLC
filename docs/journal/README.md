@@ -14,3 +14,4 @@ Une entrée par session de travail significative : `AAAA-MM-JJ-sujet.md`.
 - [2026-11-11 — Les dépôts publics d'Anthropic](2026-11-11-depots-anthropic.md)
 - [2026-11-11 — Synthèse croisée des sources](2026-11-11-synthese-croisee.md)
 - [2026-11-12 — Le cycle complet, décidé sur un schéma](2026-11-12-cycle-complet.md)
+- [2026-11-13 — Relecture de cohérence avant de construire](2026-11-13-relecture-de-coherence.md)

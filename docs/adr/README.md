@@ -31,5 +31,6 @@ Un **ADR** (*Architecture Decision Record*) est une courte fiche qui documente u
 | [0016](0016-comprendre-le-tronc.md) | Comprendre le tronc, accepter les feuilles sur preuve | Accepté (hypothèse) |
 | [0017](0017-cycle-complet.md) | Le cycle complet : portes humaines, rôles d'agents | Accepté (hypothèse) |
 | [0018](0018-exigences-de-qualite.md) | Exigences de qualité : un guide à tiroirs au cadrage, des règles garanties ensuite | Accepté (hypothèse) |
+| [0019](0019-etats-et-gabarit-du-ticket.md) | Le ticket : ses états, ses portes, son gabarit | Accepté (hypothèse) |
 
 > JDLC est en conception : la version 0.1.0 sera la première implémentation. Tant que la version est inférieure à 1.0, un ADR accepté est une hypothèse de travail, à vérifier par l'usage ([ADR-0011](0011-versionnement.md)).

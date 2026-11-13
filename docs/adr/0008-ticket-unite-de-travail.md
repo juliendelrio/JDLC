@@ -46,3 +46,14 @@ Le développement agentique s'accorde bien avec les méthodes agiles. Kanban app
 - **« Un seul écrivain par ticket » et « permission explicite pour écrire » sont des règles pour les agents.** Pour les humains, c'est l'outil de tickets qui garantit les droits.
 - **Le lien entre les phases de JDLC et le cycle de vie du ticket n'est pas décidé.** Les états du ticket sont-ils les phases ? Les portes humaines sont-elles des changements d'état ? À trancher plus tard.
 - **Un ensemble de skills par outil de tickets** : la piste retenue est un plugin par outil dans la marketplace JDLC. Chaque plugin traduit le vocabulaire générique de JDLC dans celui de l'outil (un ticket est une *issue* dans GitHub) et a un chemin d'accès par défaut et des chemins de secours. Voir l'[ADR-0005](0005-mecanisme-installation.md).
+
+## Précisions du 2026-11-12
+
+- **Les deux questions laissées ouvertes sont closes** par l'[ADR-0019](0019-etats-et-gabarit-du-ticket.md) : les états du ticket ne sont pas les étapes du cycle, et une porte humaine est un changement d'état que seul un humain peut faire.
+- **Le premier outil de tickets pris en charge est GitHub.** GitLab sera sûrement le second. Le stockage dans des fichiers du dépôt n'est pas dans la première implémentation.
+- Le gabarit du ticket et ses neuf états sont dans l'ADR-0019.
+
+## Précisions du 2026-11-13
+
+- **La permission d'écrire dans l'outil de tickets est accordée par un humain à l'initialisation du projet**, une fois, et non à chaque écriture. Elle couvre l'écriture dans les tickets et l'ouverture des pull requests. La fusion reste décidée par un humain, même quand un agent l'exécute ([ADR-0019](0019-etats-et-gabarit-du-ticket.md)).
+- **L'écrivain unique d'un ticket est l'instance.** Les agents d'une même instance (garant du cadre, réalisateur, vérificateur) écrivent tous sous ce verrou.

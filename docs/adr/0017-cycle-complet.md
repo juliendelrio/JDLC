@@ -166,3 +166,21 @@ Un ticket bloqué est le seul arrêt imprévu : un humain y répond à la questi
   - le lien entre ces étapes et les états du ticket ([ADR-0008](0008-ticket-unite-de-travail.md)).
 - **Non tranché, à déterminer par l'usage :** ce que deviennent les tickets en cours quand un humain change le cadre en cours de lot, et le versionnement du cadre.
 - Les contrôles automatiques (intégration continue, analyse statique, détection de secrets) appartiennent au projet cible. JDLC conseille au moment du cadre, puis garantit les règles retenues pendant la réalisation ([ADR-0018](0018-exigences-de-qualite.md)).
+
+## Précisions du 2026-11-12
+
+Une relecture de cohérence a relevé des écarts avec l'[ADR-0019](0019-etats-et-gabarit-du-ticket.md), écrit après celui-ci.
+
+- **Le lien entre les étapes et les états du ticket est tranché** par l'ADR-0019. Il ne fait plus partie de ce qui reste à concevoir.
+- **La porte du découpage** se franchit pour tout un lot d'un coup, ou ticket par ticket, au choix de l'humain. « Une fois par lot » est le cas courant, pas une obligation.
+- **Un ticket se bloque pour trois raisons** : le cadre est muet, trois renvois de suite, ou une action irréversible à venir.
+- **« Reporté » et « écarté », dans le schéma, concernent des fonctionnalités**, à la porte des priorités. Un ticket, lui, n'a pas d'état « reporté » : il change de lot. Il peut être abandonné par un humain.
+
+## Précisions du 2026-11-13
+
+Six points tranchés après la relecture de cohérence. Le détail est dans l'[ADR-0019](0019-etats-et-gabarit-du-ticket.md).
+
+- **Entrée courte** : le ticket ne repasse ni par le cadre ni par les priorités, mais un humain valide ses critères d'acceptation et son profil avant qu'il n'entre dans la file. La flèche directe du schéma vers « tickets prêts » est un raccourci de dessin.
+- **Tests d'acceptation** : ils sont écrits avant la réalisation, sur le modèle du développement piloté par les tests.
+- **Départ supervisé** : chaque arrêt passe le ticket à l'état « bloqué », avec une question à un humain.
+- **Fusion** : un humain la décide. Il peut la faire lui-même ou la demander à un agent, qui l'exécute et met les états à jour. Le bilan s'ajoute au ticket juste après.

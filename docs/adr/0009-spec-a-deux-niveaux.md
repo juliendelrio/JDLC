@@ -51,5 +51,6 @@ Conséquences :
 
 ## Précisions du 2026-11-12
 
-- **La validation humaine des critères d'acceptation se fait une fois par lot**, à la porte du découpage, et non ticket par ticket. Avant elle, un agent autre que le rédacteur relit chaque spec de ticket. Voir l'[ADR-0017](0017-cycle-complet.md).
+- **La validation humaine des critères d'acceptation se fait à la porte du découpage**, avant la construction. L'humain peut valider tout un lot d'un coup, ou ticket par ticket. Avant elle, un agent autre que le rédacteur relit chaque spec de ticket. Voir l'[ADR-0017](0017-cycle-complet.md).
 - **Les exigences de qualité rejoignent le cadre**, à côté de la spec principale et de la conception. Voir l'[ADR-0018](0018-exigences-de-qualite.md).
+- **Après la validation humaine, un agent ne change pas un critère d'acceptation.** Si un changement est nécessaire, il repasse par un humain. Le reste de la spec de ticket continue d'évoluer en « mode commentaire ». Voir l'[ADR-0019](0019-etats-et-gabarit-du-ticket.md).

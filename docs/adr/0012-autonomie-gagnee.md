@@ -29,3 +29,7 @@ Les sources divergent sur le mode par défaut : autonome (AIDD, défaut actuel d
 
 - **Le départ supervisé se place sur le premier ticket d'un projet ou d'un lot** : l'agent réalisateur s'y arrête à chaque étape devant un humain. Si ce ticket est propre, les agents font les suivants seuls.
 - **Une anomalie qui arrête un agent** : trois renvois de suite du vérificateur vers le réalisateur, ou une action irréversible à venir. Le ticket passe à l'état « bloqué » et pose une question à un humain. Voir l'[ADR-0017](0017-cycle-complet.md).
+
+## Précisions du 2026-11-13
+
+- **Un arrêt supervisé passe le ticket à l'état « bloqué »**, avec la question « étape finie, je continue ? ». Il n'y a pas d'état dédié ([ADR-0019](0019-etats-et-gabarit-du-ticket.md)).

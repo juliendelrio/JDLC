@@ -69,7 +69,7 @@ Le cycle a trois niveaux : le **produit**, le **lot** (une version ou un jalon) 
 
 1. **Cadrer et concevoir.** Un humain et un agent construisent en discussion la spec principale, la conception et les exigences de qualité. Un humain valide ce cadre.
 2. **Prioriser.** Un humain décide ce qui est implémenté, reporté ou écarté, et dans quel ordre. Cet ordre fixe les lots.
-3. **Découper le lot en cours.** Un agent écrit les tickets, leurs critères d'acceptation et leur profil. Un autre agent relit chaque spec de ticket. Un humain valide le découpage, une fois par lot.
+3. **Découper le lot en cours.** Un agent écrit les tickets, leurs critères d'acceptation et leur profil. Un autre agent relit chaque spec de ticket. Un humain valide le découpage, pour tout le lot d'un coup ou ticket par ticket.
 4. **Réaliser les tickets.** Des agents travaillent seuls, sur plusieurs tickets à la fois, dans trois rôles : garant du cadre, réalisateur, vérificateur. Un humain valide le plan des seuls tickets du tronc, puis le résultat de chaque ticket à la pull request.
 5. **Préparer la version.** Un agent vérifie le lot entier contre la spec principale. Un humain décide de publier.
 6. **Rétrospective du lot.** Un humain et un agent examinent le produit, le cadre et le processus. Les propositions faites au fil de l'eau par les agents l'alimentent.
@@ -80,7 +80,9 @@ Les exigences de qualité (sécurité, vie privée, accessibilité, éco-concept
 
 ## Unité de travail
 
-L'unité de travail de JDLC est un **ticket** générique, inspiré de Kanban et de Scrum. Le propriétaire du projet choisit où vivent les tickets : dans le dépôt ou dans un outil de tickets (issues GitHub ou GitLab, Jira…). JDLC accède à chaque outil par un ensemble de skills dédié, et un projet ne charge que celui qui lui correspond. *([ADR-0008](adr/0008-ticket-unite-de-travail.md).)*
+L'unité de travail de JDLC est un **ticket** générique, inspiré de Kanban et de Scrum. Le propriétaire du projet choisit où vivent les tickets : dans le dépôt ou dans un outil de tickets (issues GitHub ou GitLab, Jira…). JDLC accède à chaque outil par un ensemble de skills dédié, et un projet ne charge que celui qui lui correspond. Le premier outil pris en charge est GitHub. *([ADR-0008](adr/0008-ticket-unite-de-travail.md).)*
+
+L'état d'un ticket dit qui doit agir : un agent, un humain, ou personne. Une porte humaine est un changement d'état qui demande la décision d'un humain : un agent peut exécuter le geste, jamais le décider. *([ADR-0019](adr/0019-etats-et-gabarit-du-ticket.md).)*
 
 La spec a deux niveaux. La **spec principale** est transverse : vision, grandes fonctionnalités, personas. La **spec de ticket** porte le travail en cours. Un **ticket parent** peut regrouper la spec partagée de plusieurs tickets. *([ADR-0009](adr/0009-spec-a-deux-niveaux.md).)*
 
